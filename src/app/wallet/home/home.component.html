@@ -1,0 +1,41 @@
+<div class="min-h-screen">
+
+  <div id="top_bar" class="overflow-hidden">
+    <p class="text-center mt-5 text-white text-2xl">Wallet Balance</p>
+
+    <div *ngIf="balance" id="balance" class="flex flex-col items-center">
+      <div class="flex items-center">
+        <div class="text-white text-5xl">
+          {{balance}}<span class="text-base"> (TON)</span>
+        </div>
+        <img src="assets/ton.svg" class="w-20" style="position:relative; left: -20px"/>
+      </div>
+
+      <div class="flex self-start items-center text-white text-xl">
+        ≈
+        <div class="text-white text-2xl ml-2">
+          <span style="position: relative;">{{balance * 1.39}}</span> <span class="ms-3">$</span>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div>
+      <img src="assets/graph.svg"/>
+
+      <div class="flex items-center justify-around my-3 w-full max-w-2xl mx-auto">
+        <span class="text-secondary">Day</span>
+        <span class="inline-block py-2 px-5 text-primary_shade rounded bg-neutral-100 bg-opacity-30">Week</span>
+        <span class="text-secondary">Month</span>
+        <span class="text-secondary">Year</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="bottom_bar">
+    <div class="text-center rounded-xl flex items-center justify-center w-full text-secondary text-xl max-w-md mx-auto h-10 my-3 border-2 border-secondary border-dashed">Send</div>
+    <div class="text-center rounded-xl flex items-center justify-center w-full text-secondary text-xl max-w-md mx-auto h-10 my-3 border-2 border-secondary border-dashed">Receive</div>
+    <div class="text-center rounded-xl flex items-center justify-center w-full text-secondary text-xl max-w-md mx-auto h-10 my-3 border-2 border-secondary border-dashed">Swap</div>
+  </div>
+</div>

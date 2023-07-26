@@ -1,0 +1,16 @@
+#top_bar {
+  height: 50vh;
+  background: theme('colors.primary');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#bottom_bar {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

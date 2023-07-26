@@ -1,0 +1,20 @@
+input {
+  border: 1px solid theme('colors.neutral.300');
+  outline: 0;
+  border-radius: 0.5rem;
+  height: 2.4rem;
+  padding: 0.2rem 0.4rem;
+
+  &.input-full {
+    width: 100%;
+  }
+
+  &.input-inline-block {
+    width: 100%;
+    max-width: 15rem;
+  }
+
+  &:focus {
+    box-shadow: 0 0 3px -1px theme('colors.primary');
+  }
+}

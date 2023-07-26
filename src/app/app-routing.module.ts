@@ -4,7 +4,16 @@ import {RouterModule, Routes} from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/wallet/wallet.module').then(m => m.WalletModule),
+    redirectTo: 'auth',
+    pathMatch: "full"
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+  },
+  {
+    path: 'wallet',
+    loadChildren: () => import('./wallet/wallet.module').then(m => m.WalletModule),
   },
   // {
   //   path: '**',

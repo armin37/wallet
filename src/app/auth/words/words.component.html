@@ -1,0 +1,30 @@
+<div class="body">
+  <div>
+    <header class="mb-8">
+      <h2 *ngIf="route === 'sign-up'" class="title">
+        Write down below words ...
+      </h2>
+
+      <h2 *ngIf="route === 'sign-in'" class="title">
+        Enter your wallet secret words ...
+      </h2>
+
+      <h2 *ngIf="route === 'check'" class="title">
+        Enter hidden words
+      </h2>
+    </header>
+
+    <div [formGroup]="form" class="flex flex-wrap">
+      <ng-container formArrayName="words">
+        <div *ngFor="let control of words.controls; let i = index" class="text-center px-2 mb-4 w-1/2 lg:w-1/4">
+          <w-input [control]="asFormControl(words.at(i))" expand="full"></w-input>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="mt-10">
+      <w-button (clicked)="nextStep()" [loading]="loading" label="Next" expand="inline-block"
+                cssClasses="!bg-primary !text-white"></w-button>
+    </div>
+  </div>
+</div>

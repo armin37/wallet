@@ -1,19 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.d-none {
-  display: none;
+.body {
+  font-size: 14px;
+  padding: 1rem 2rem;
 }
 
-.d-block {
-  display: block;
-}
-
-@media screen and (min-width: 768px) {
-  .d-md-none {
-    display: none;
-  }
-
-  .d-md-block {
-    display: block;
-  }
+.title {
+  font-size: 1.6rem;
+  font-weight: 400;
 }
